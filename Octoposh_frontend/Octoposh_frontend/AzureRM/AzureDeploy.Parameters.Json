@@ -3,7 +3,7 @@
   "contentVersion": "#{Octopus.Release.Version}",
   "parameters": {
     "webAppName": {
-        "value": "Octoposh"
+        "value": "Octoposh-Production"
     },
     "releaseVersion": {
         "value": "#{Octopus.Release.Version}"

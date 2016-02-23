@@ -1,12 +1,12 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-  "contentVersion": "#{Octopus.Release.Version}",
+  "contentVersion": "#{Octopus.Release.Number}",
   "parameters": {
     "webAppName": {
         "value": "Octoposh-#{Octopus.Environment.Name}"
     },
     "releaseVersion": {
-        "value": "#{Octopus.Release.Version}"
+        "value": "#{Octopus.Release.Number}"
     },
     "location": {
         "value": "South Central US"

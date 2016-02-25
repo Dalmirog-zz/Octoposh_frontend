@@ -1,4 +1,4 @@
 #
 # SwapSlot.ps1
 #
-Switch-AzureWebsiteSlot -Name #{WebSite} -Slot1 Staging -Slot2 Production -Force
+Switch-AzureWebsiteSlot -Name $WebAppName -Slot1 $OctopusParameters['Octopus.Environment.Name'] -Slot2 Production -Force -verbose

@@ -74,9 +74,10 @@
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="AzureRM\AzureDeploy.Json" />
-    <Content Include="AzureRM\AzureDeploy.Parameters.Json" />
-    <Content Include="AzureRM\CreateResourceGroup.ps1" />
+    <Content Include="Azure\AzureDeploy.Json" />
+    <Content Include="Azure\AzureDeploy.Parameters.Json" />
+    <Content Include="Azure\CreateResourceGroup.ps1" />
+    <Content Include="Azure\SwapSlot.ps1" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

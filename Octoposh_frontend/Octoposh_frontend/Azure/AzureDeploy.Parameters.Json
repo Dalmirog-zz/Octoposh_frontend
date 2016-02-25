@@ -5,6 +5,9 @@
     "webAppName": {
         "value": "#{WebAppName}"
     },
+    "slotName": {
+        "value": "#{Octopus.Environment.Name}"
+    },
     "releaseVersion": {
         "value": "#{Octopus.Release.Number}"
     },

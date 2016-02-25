@@ -7,7 +7,13 @@
             "minLength": 1,
             "metadata": {
                 "description": "The name of the Web App"
-            }
+            },
+        "slotName": {
+            "type": "string",
+            "minLength": 1,
+            "metadata": {
+                "description": "Name of the Secondary slot which will match the name of the pre-prod Environment in Octopus"
+        }
         },
         "releaseVersion": {
             "type": "string",
@@ -86,7 +92,7 @@
             "resources": [
                 {
                     "apiVersion": "2015-08-01",
-                    "name": "staging",
+                    "name": "[parameters('slotName')]",
                     "type": "slots",
                     "location": "[parameters('location')]",
                     "dependsOn": [

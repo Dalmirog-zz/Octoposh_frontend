@@ -7,106 +7,106 @@
             "minLength": 1,
             "metadata": {
                 "description": "The name of the Web App"
-            },
-            "slotName": {
-                "type": "string",
-                "minLength": 1,
-                "metadata": {
-                    "description": "Name of the Secondary slot which will match the name of the pre-prod Environment in Octopus"
-
-                }
-            },
-            "releaseVersion": {
-                "type": "string",
-                "metadata": {
-                    "description": "The version of the template will always be the same as BuildVersion/PackageVersion/ReleaseVersion SameVertionAllTehThings"
-                }
-            },
-            "location": {
-                "type": "string",
-                "metadata": {
-                    "description": "Overall location of everything created with this resource template"
-                }
-            },
-            "hostingPlanName": {
-                "type": "string",
-                "defaultValue": "[concat([parameters('webAppName')], _HostingPlan)]",
-                "metadata": {
-                    "description": "The name of the App Service plan to use for hosting the web app."
-                }
-            },
-            "sku": {
-                "type": "string",
-                "allowedValues": [
-                    "Shared",
-                    "Standard"
-                ],
-                "defaultValue": "Standard",
-                "metadata": {
-                    "description": "The pricing tier for the hosting plan."
-                }
-            },
-            "workerSize": {
-                "type": "string",
-                "allowedValues": [
-                    "0",
-                    "1",
-                    "2"
-                ],
-                "defaultValue": "0",
-                "metadata": {
-                    "description": "The instance size of the hosting plan (small, medium, or large)."
-                }
             }
         },
-        "variables": {
+        "slotName": {
+            "type": "string",
+            "minLength": 1,
+            "metadata": {
+                "description": "Name of the Secondary slot which will match the name of the pre-prod Environment in Octopus"
+
+            }
         },
-        "resources": [
-            {
-                "apiVersion": "2014-06-01",
-                "location": "[parameters('location')]",
+        "releaseVersion": {
+            "type": "string",
+            "metadata": {
+                "description": "The version of the template will always be the same as BuildVersion/PackageVersion/ReleaseVersion SameVertionAllTehThings"
+            }
+        },
+        "location": {
+            "type": "string",
+            "metadata": {
+                "description": "Overall location of everything created with this resource template"
+            }
+        },
+        "hostingPlanName": {
+            "type": "string",
+            "defaultValue": "[concat([parameters('webAppName')], _HostingPlan)]",
+            "metadata": {
+                "description": "The name of the App Service plan to use for hosting the web app."
+            }
+        },
+        "sku": {
+            "type": "string",
+            "allowedValues": [
+                "Shared",
+                "Standard"
+            ],
+            "defaultValue": "Standard",
+            "metadata": {
+                "description": "The pricing tier for the hosting plan."
+            }
+        },
+        "workerSize": {
+            "type": "string",
+            "allowedValues": [
+                "0",
+                "1",
+                "2"
+            ],
+            "defaultValue": "0",
+            "metadata": {
+                "description": "The instance size of the hosting plan (small, medium, or large)."
+            }
+        }
+    },
+    "variables": {
+    },
+    "resources": [
+        {
+            "apiVersion": "2014-06-01",
+            "location": "[parameters('location')]",
+            "name": "[parameters('hostingPlanName')]",
+            "properties": {
                 "name": "[parameters('hostingPlanName')]",
-                "properties": {
-                    "name": "[parameters('hostingPlanName')]",
-                    "sku": "[parameters('sku')]",
-                    "workerSize": "[parameters('workerSize')]",
-                    "numberOfWorkers": 1
-                },
-                "type": "Microsoft.Web/serverfarms"
+                "sku": "[parameters('sku')]",
+                "workerSize": "[parameters('workerSize')]",
+                "numberOfWorkers": 1
             },
-            {
-                "apiVersion": "2015-08-01",
+            "type": "Microsoft.Web/serverfarms"
+        },
+        {
+            "apiVersion": "2015-08-01",
+            "name": "[parameters('webAppName')]",
+            "type": "Microsoft.Web/sites",
+            "dependsOn": [
+                "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
+            ],
+            "properties": {
                 "name": "[parameters('webAppName')]",
-                "type": "Microsoft.Web/sites",
-                "dependsOn": [
-                    "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
-                ],
-                "properties": {
-                    "name": "[parameters('webAppName')]",
-                    "enabledHostnames": [ "http://Octoposh.net" ],
-                    "serverFarmId": "[parameters('hostingPlanName')]"
-                },
-                "location": "[parameters('location')]",
-                "tags": {
-                    "displayName": "Web App"
-                },
-                "resources": [
-                    {
-                        "apiVersion": "2015-08-01",
-                        "name": "[parameters('slotName')]",
-                        "type": "slots",
-                        "location": "[parameters('location')]",
-                        "dependsOn": [
-                            "[resourceId('Microsoft.Web/Sites', parameters('webAppName'))]"
-                        ],
-                        "properties": {
+                "enabledHostnames": [ "http://Octoposh.net" ],
+                "serverFarmId": "[parameters('hostingPlanName')]"
+            },
+            "location": "[parameters('location')]",
+            "tags": {
+                "displayName": "Web App"
+            },
+            "resources": [
+                {
+                    "apiVersion": "2015-08-01",
+                    "name": "[parameters('slotName')]",
+                    "type": "slots",
+                    "location": "[parameters('location')]",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Web/Sites', parameters('webAppName'))]"
+                    ],
+                    "properties": {
 
-                        }
                     }
-                ]
+                }
+            ]
 
-            }
+        }
 
-        ]
-    }
+    ]
 }

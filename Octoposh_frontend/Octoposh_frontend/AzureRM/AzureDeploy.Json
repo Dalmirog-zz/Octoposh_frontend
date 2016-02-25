@@ -1,78 +1,76 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "[parameters('releaseVersion')]",
-  "parameters": {
-    "webAppName": {
-      "type": "string",
-      "minLength": 1,
-      "metadata": {
-        "description": "The name of the Web App"
-      }
-    },    
-    "releaseVersion": {
-        "type": "string",
-        "metadata": {
-            "description": "The version of the template will always be the same as BuildVersion/PackageVersion/ReleaseVersion #SameVertionAllTehThings"
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "[parameters('releaseVersion')]",
+    "parameters": {
+        "webAppName": {
+            "type": "string",
+            "minLength": 1,
+            "metadata": {
+                "description": "The name of the Web App"
+            }
+        },
+        "releaseVersion": {
+            "type": "string",
+            "metadata": {
+                "description": "The version of the template will always be the same as BuildVersion/PackageVersion/ReleaseVersion SameVertionAllTehThings"
+            }
+        },
+        "location": {
+            "type": "string",
+            "metadata": {
+                "description": "Overall location of everything created with this resource template"
+            }
+        },
+        "hostingPlanName": {
+            "type": "string",
+            "defaultValue": "Octoposh_HostingPlan",
+            "metadata": {
+                "description": "The name of the App Service plan to use for hosting the web app."
+            }
+        },
+        "sku": {
+            "type": "string",
+            "allowedValues": [
+                "Shared",
+                "Standard"
+            ],
+            "defaultValue": "Standard",
+            "metadata": {
+                "description": "The pricing tier for the hosting plan."
+            }
+        },
+        "workerSize": {
+            "type": "string",
+            "allowedValues": [
+                "0",
+                "1",
+                "2"
+            ],
+            "defaultValue": "0",
+            "metadata": {
+                "description": "The instance size of the hosting plan (small, medium, or large)."
+            }
         }
     },
-    "location": {
-        "type": "string",
-        "metadata": {
-            "description": "Overall location of everything created with this resource template"
-        }
-    },
-    "hostingPlanName": {
-        "type": "string",
-        "defaultValue": "[concat(parameters('webAppName'),'_HostingPlan' )]" ,
-        "metadata": {
-            "description": "The name of the App Service plan to use for hosting the web app."
-        }
-    },
-    "sku": {
-      "type": "string",
-      "allowedValues": [
-        "Free",
-        "Shared",
-        "Basic",
-        "Standard"
-      ],
-      "defaultValue": "Shared",
-      "metadata": {
-        "description": "The pricing tier for the hosting plan."
-      }
-    },
-    "workerSize": {
-      "type": "string",
-      "allowedValues": [
-        "0",
-        "1",
-        "2"
-      ],
-      "defaultValue": "0",
-      "metadata": {
-        "description": "The instance size of the hosting plan (small, medium, or large)."
-      }
-    }
-  },
     "variables": {        
     },
     "resources": [
         {
-        "apiVersion": "2014-06-01",
-        "location": "[parameters('location')]",
-        "name": "[parameters('hostingPlanName')]",
-        "properties": {
+            "apiVersion": "2014-06-01",
+            "location": "[parameters('location')]",
             "name": "[parameters('hostingPlanName')]",
-            "sku": "[parameters('sku')]",
-            "workerSize": "[parameters('workerSize')]",
-            "numberOfWorkers": 1
+            "properties": {
+                "name": "[parameters('hostingPlanName')]",
+                "sku": "[parameters('sku')]",
+                "workerSize": "[parameters('workerSize')]",
+                "numberOfWorkers": 1
+            },
+            "type": "Microsoft.Web/serverfarms"
         },
-        "type": "Microsoft.Web/serverfarms"
-    },
         {
             "apiVersion": "2015-08-01",
-            "location": "[parameters('location')]",
             "name": "[parameters('webAppName')]",
+            "type": "Microsoft.Web/sites",
             "dependsOn": [
                 "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
             ],
@@ -81,10 +79,25 @@
                 "enabledHostnames": [ "http://Octoposh.net" ],
                 "serverFarmId": "[parameters('hostingPlanName')]"
             },
+            "location": "[parameters('location')]",
             "tags": {
                 "displayName": "Web App"
             },
-            "type": "Microsoft.Web/sites"
+            "resources": [
+                {
+                    "apiVersion": "2015-08-01",
+                    "name": "staging",
+                    "type": "slots",
+                    "location": "[parameters('location')]",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Web/Sites', parameters('webAppName'))]"
+                    ],
+                    "properties": {                        
+                        
+                    }
+                }
+            ]
+
         }
 
     ]

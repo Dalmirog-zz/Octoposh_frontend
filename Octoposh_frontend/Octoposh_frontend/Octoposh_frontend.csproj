@@ -76,6 +76,7 @@
     <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="AzureRM\AzureDeploy.Json" />
     <Content Include="AzureRM\AzureDeploy.Parameters.Json" />
+    <Content Include="AzureRM\CreateResourceGroup.ps1" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,8 @@
+C:\github\Octoposh_frontend\Octoposh_frontend\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\github\Octoposh_frontend\Octoposh_frontend\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\github\Octoposh_frontend\Octoposh_frontend\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\github\Octoposh_frontend\Octoposh_frontend\ConsoleApplication1\bin\Debug\Octoposh.Client.dll
+C:\github\Octoposh_frontend\Octoposh_frontend\ConsoleApplication1\bin\Debug\Octoposh.Client.pdb
+C:\github\Octoposh_frontend\Octoposh_frontend\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\github\Octoposh_frontend\Octoposh_frontend\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\github\Octoposh_frontend\Octoposh_frontend\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

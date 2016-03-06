@@ -96,7 +96,7 @@
     <Content Include="img\gitter-sm.png" />
     <Content Include="img\octoposh-lg.png" />
     <Content Include="img\octoposh-sm.png" />
-    <Content Include="index.html" />
+    <None Include="index.cshtml" />
     <Content Include="js\jquery-1.11.3.min.js" />
     <Content Include="js\script.js" />
     <Content Include="js\underscore-min.js" />

@@ -41,7 +41,7 @@
 	display: inline;
 }
 
-table#releases > tbody > tr:first-of-type {
+table#releases > tbody > tr:first-child > td{
 	font-weight: bold;
 	background-color: #DFF0D8;
 }
@@ -57,4 +57,7 @@ footer {
 	border-top: 1px solid #e3e3e3;
 	width: 100%;
 	color: #999999;
+}
+th {
+    text-align: center;
 }

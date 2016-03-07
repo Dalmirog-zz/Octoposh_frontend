@@ -12,5 +12,6 @@ namespace Octoposh.Client.Model
         int Downloads { get; set; }
         DateTime DatePushed { get; set; }
         Uri ReleaseNotesURI { get; set; }
+        Uri GalleryDownloadURI { get; set; }
     }
 }

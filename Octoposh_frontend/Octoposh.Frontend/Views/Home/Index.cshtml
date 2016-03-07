@@ -1,5 +1,4 @@
 ﻿@model List<Octoposh.Client.Model.GalleryEntry>
-
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-md-6">
@@ -23,7 +22,7 @@
                         <span class="code">C:\> Import-Module Octoposh</span><br>
                     </li>
                 </ol>
-                <p class="text-center small">The Install-Module cmdlet is part of the <strong><a target="_blank" href="http://go.microsoft.com/fwlink/?LinkId=398175">Windows Management Framework 5.0 Preview</a>.</strong></p>
+                <p class="text-center small">The Install-Module cmdlet is part of the <strong><a target="_blank" href="https://www.microsoft.com/en-us/download/details.aspx?id=50395">Windows Management Framework 5.0</a>.</strong></p>
             </div>
             <p>
                 Click <a href="https://github.com/Dalmirog/OctoPosh/wiki/Installing-the-module" target="_blank">here</a> for alternative installation methods.
@@ -57,20 +56,20 @@
                         Release Notes
                     </th>
                 </tr>
-                <tbody>
-                    @foreach (var entry in Model) { 
+                <tbody >
+                    @for(var i = 0; i <5; i++) {
                         <tr>
                             <td>
-                                @entry.Version
+                                @Model[@i].Version
                             </td>
                             <td>
-                                @entry.Downloads
+                                @Model[@i].Downloads
                             </td>
                             <td>
-                                @entry.DatePushed.Date
+                                @Model[@i].DatePushed.ToString("dd/MM/yyy")
                             </td>
                             <td>
-                                <a href="@entry.ReleaseNotesURI" target="_blank">Release Notes <span class="glyphicon glyphicon-share-alt"></span></a>
+                                <a href="@Model[@i].ReleaseNotesURI" target="_blank">Release Notes <span class="glyphicon glyphicon-share-alt"></span></a>
                             </td>
                         </tr>
                     }

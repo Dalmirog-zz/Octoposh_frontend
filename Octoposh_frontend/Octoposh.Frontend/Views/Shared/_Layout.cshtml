@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Octoposh</title>
+    <title>Octoposh</title>    
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -14,12 +14,10 @@
             <h1 itemprop="name">OctoPosh</h1>
             <p>The Octopus Deploy Powershell module</p>
         </div>
-        
-        <div class="container body-content">
-            @RenderBody()            
-        </div>
-        
 
+        <div class="container body-content">
+            @RenderBody()
+        </div>
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)

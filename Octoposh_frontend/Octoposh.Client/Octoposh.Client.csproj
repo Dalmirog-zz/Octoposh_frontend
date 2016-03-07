@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="Gallery.cs" />
     <Compile Include="GalleryEntry.cs" />
-    <Compile Include="GetGalleryData.cs" />
     <Compile Include="IGalleryEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

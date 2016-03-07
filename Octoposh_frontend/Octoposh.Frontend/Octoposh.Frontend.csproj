@@ -211,7 +211,7 @@
     <Content Include="Content\img\octoposh-sm.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\site.css" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Azure\AzureDeploy.Json" />
     <Content Include="Azure\AzureDeploy.Parameters.Json" />

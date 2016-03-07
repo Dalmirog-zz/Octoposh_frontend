@@ -20,5 +20,7 @@ namespace Octoposh.Client.Model
             }
             set { }
         }
+        public Uri GalleryDownloadURI { get; set; }
+
     }
 }

@@ -3,19 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Octoposh_frontend", "Octoposh_frontend\Octoposh_frontend.csproj", "{AF9E0E0C-C5ED-45D4-8118-FA6E38BEAD02}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Octoposh.Frontend", "Octoposh.Frontend\Octoposh.Frontend.csproj", "{2D50737E-9A69-4D7E-A311-8E245025DB32}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3BED1BBE-5C29-4D18-9867-BC5DE257F9E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Octoposh.Frontend.Tests", "Octoposh.Frontend.Tests\Octoposh.Frontend.Tests.csproj", "{070770EF-0AE9-4514-A63B-E5EEA4839265}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleProject", "ExampleProject\ExampleProject.csproj", "{ECB5F577-36A6-495E-BC70-8FDDD962E14F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Octoposh.Client", "Octoposh.Client\Octoposh.Client.csproj", "{A24197F0-79A9-4EF1-AA1B-3CCF68F87685}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{77389412-9EF4-49D7-AE83-C8B9FB868E45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AF9E0E0C-C5ED-45D4-8118-FA6E38BEAD02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF9E0E0C-C5ED-45D4-8118-FA6E38BEAD02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF9E0E0C-C5ED-45D4-8118-FA6E38BEAD02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF9E0E0C-C5ED-45D4-8118-FA6E38BEAD02}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2D50737E-9A69-4D7E-A311-8E245025DB32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2D50737E-9A69-4D7E-A311-8E245025DB32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D50737E-9A69-4D7E-A311-8E245025DB32}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,18 +25,10 @@ Global
 		{070770EF-0AE9-4514-A63B-E5EEA4839265}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{070770EF-0AE9-4514-A63B-E5EEA4839265}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{070770EF-0AE9-4514-A63B-E5EEA4839265}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ECB5F577-36A6-495E-BC70-8FDDD962E14F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ECB5F577-36A6-495E-BC70-8FDDD962E14F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ECB5F577-36A6-495E-BC70-8FDDD962E14F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ECB5F577-36A6-495E-BC70-8FDDD962E14F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A24197F0-79A9-4EF1-AA1B-3CCF68F87685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A24197F0-79A9-4EF1-AA1B-3CCF68F87685}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A24197F0-79A9-4EF1-AA1B-3CCF68F87685}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A24197F0-79A9-4EF1-AA1B-3CCF68F87685}.Release|Any CPU.Build.0 = Release|Any CPU
-		{77389412-9EF4-49D7-AE83-C8B9FB868E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77389412-9EF4-49D7-AE83-C8B9FB868E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77389412-9EF4-49D7-AE83-C8B9FB868E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77389412-9EF4-49D7-AE83-C8B9FB868E45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

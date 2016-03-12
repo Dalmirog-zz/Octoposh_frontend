@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Octoposh.Frontend.Tests", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Octoposh.Client", "Octoposh.Client\Octoposh.Client.csproj", "{A24197F0-79A9-4EF1-AA1B-3CCF68F87685}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{17C0E8A7-DF9B-411B-B623-A11595C9F10E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{A24197F0-79A9-4EF1-AA1B-3CCF68F87685}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A24197F0-79A9-4EF1-AA1B-3CCF68F87685}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A24197F0-79A9-4EF1-AA1B-3CCF68F87685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17C0E8A7-DF9B-411B-B623-A11595C9F10E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C0E8A7-DF9B-411B-B623-A11595C9F10E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C0E8A7-DF9B-411B-B623-A11595C9F10E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C0E8A7-DF9B-411B-B623-A11595C9F10E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

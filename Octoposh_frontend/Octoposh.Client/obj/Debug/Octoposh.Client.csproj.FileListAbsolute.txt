@@ -3,3 +3,6 @@ C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Client\bin\Debug\Octoposh
 C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Client\obj\Debug\Octoposh.Client.csprojResolveAssemblyReference.cache
 C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Client\obj\Debug\Octoposh.Client.dll
 C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Client\obj\Debug\Octoposh.Client.pdb
+C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Client\bin\Debug\Octokit.dll
+C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Client\bin\Debug\Octokit.pdb
+C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Client\bin\Debug\Octokit.xml

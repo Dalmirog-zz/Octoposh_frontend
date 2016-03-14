@@ -81,3 +81,6 @@ C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Frontend\obj\Debug\Octopo
 C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Frontend\obj\Debug\Octoposh.Frontend.pdb
 C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Frontend\bin\Octoposh.Client.dll
 C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Frontend\bin\Octoposh.Client.pdb
+C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Frontend\bin\Octokit.dll
+C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Frontend\bin\Octokit.pdb
+C:\github\Octoposh_frontend\Octoposh_frontend\Octoposh.Frontend\bin\Octokit.xml

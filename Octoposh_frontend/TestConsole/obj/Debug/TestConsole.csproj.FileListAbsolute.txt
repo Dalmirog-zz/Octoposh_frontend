@@ -1,4 +1,3 @@
-C:\github\Octoposh_frontend\Octoposh_frontend\TestConsole\bin\Debug\TestConsole.exe.config
 C:\github\Octoposh_frontend\Octoposh_frontend\TestConsole\bin\Debug\TestConsole.exe
 C:\github\Octoposh_frontend\Octoposh_frontend\TestConsole\bin\Debug\TestConsole.pdb
 C:\github\Octoposh_frontend\Octoposh_frontend\TestConsole\bin\Debug\Octokit.dll
@@ -9,3 +8,4 @@ C:\github\Octoposh_frontend\Octoposh_frontend\TestConsole\bin\Debug\Octokit.xml
 C:\github\Octoposh_frontend\Octoposh_frontend\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
 C:\github\Octoposh_frontend\Octoposh_frontend\TestConsole\obj\Debug\TestConsole.exe
 C:\github\Octoposh_frontend\Octoposh_frontend\TestConsole\obj\Debug\TestConsole.pdb
+C:\github\Octoposh_frontend\Octoposh_frontend\TestConsole\bin\Debug\TestConsole.exe.config

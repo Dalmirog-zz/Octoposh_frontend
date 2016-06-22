@@ -11,8 +11,8 @@ namespace TestConsole
 {
     class Program
     {
-        //static void Main(string[] args)
-        //{
+        static void Main(string[] args)
+        {
         //    <#
         //    var credentials = new Octokit.Credentials("dalmirog", "somepassword");
         //    var APIconnection = new ApiConnection(new Octokit.Connection(new ProductHeaderValue("DalmiroTesting"))
@@ -61,6 +61,6 @@ namespace TestConsole
         //    var client = new GitHubClient(connection);
         //    var repository = client.Repository.Get("octokit", "octokit.net");
         //    Console.WriteLine(repository.FullName);
-        //}
+        }
     }
 }
